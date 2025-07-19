@@ -1,22 +1,27 @@
 {
   "expo": {
-    "name": "GDB41",
+    "name": "QuickAttend",
     "slug": "GDB41",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "gdb41",
-    "userInterfaceStyle": "automatic",
-    "newArchEnabled": true,
+    "scheme": "quickattendapp",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": false,
     "ios": {
       "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#FFFFFF"
       },
-      "edgeToEdgeEnabled": true
+      "package": "com.sandip2025.quickattend",
+      "permissions": [  // এই লাইনগুলো নতুন যোগ করা হয়েছে
+        "RECEIVE_SMS",
+        "SEND_SMS",
+        "READ_SMS"
+      ]
     },
     "web": {
       "bundler": "metro",
@@ -28,17 +33,22 @@
       [
         "expo-splash-screen",
         {
-          "image": "./assets/images/splash-icon.png",
-          "imageWidth": 200,
+          "image": "./assets/images/splash.png",
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
-      ],
-      "expo-video",
-      "react-native-video"
+      ]
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "451403bd-9fe6-449d-903b-1036815bcc50"
+      }
     }
   }
 }
